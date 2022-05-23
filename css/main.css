@@ -1,0 +1,384 @@
+/*********************
+Name: Jacob Wallace
+Coding 07-09
+Purpose: CSS for main bodies of all pages
+**********************/
+
+/******** MAIN PAGE ***********/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-image: url("../images/top-img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/********** NAV CONTAINER *************/
+
+nav {
+  color: #fff;
+  height: 5rem;
+  width: 100vw;
+  background-color: #111;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+}
+
+/*** Styling Logo ***/
+
+.logo {
+  padding:1rem;
+  text-align: center;
+}
+
+.logo img {
+  height: 4rem;
+  width: 4rem;
+}
+
+/*** Styling Links ***/
+.nav-links {
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  list-style: none; 
+  width: 88vw;
+  padding: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: rgb(153, 67, 153);
+}
+
+.nav-links li {
+  color: #fff;
+  position: relative;
+}
+
+.nav-links li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+}
+
+/*** Styling Hamburger Icon ***/
+
+.hamburger div {
+  width: 30px;
+  height:3px;
+  background: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+}
+
+/*** Animating Hamburger Icon on Click ***/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width:0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+/************* MEDIA QUERIES *****************/
+
+/****** TABLET ******/
+@media screen and (max-width: 800px) {
+
+  /*** NAVBAR ***/
+
+  nav {
+      position: fixed;
+      padding-bottom: 100px;
+  }
+
+  .hamburger {
+      display:block;
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      transition: all 1s ease;
+  }
+
+  .nav-links {
+      position: fixed;
+      background-color: #111;
+      height: 50vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(50px at 95% -50%);
+      -webkit-clip-path: circle(50px at 95% -50%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+  }
+
+  .nav-links.open {
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      pointer-events: all;
+  }
+
+  .nav-links li {
+      opacity: 0;
+  }
+
+  .nav-links li:nth-child(1) {
+      transition: all 0.5s ease 0.2s;
+  }
+
+  .nav-links li:nth-child(2) {
+      transition: all 0.5s ease 0.4s;
+  }
+
+  .nav-links li:nth-child(3) {
+      transition: all 0.5s ease 0.6s;
+  }
+
+  .nav-links li:nth-child(4) {
+      transition: all 0.5s ease 0.7s;
+  }
+
+  .nav-links li:nth-child(5) {
+      transition: all 0.5s ease 0.8s;
+  }
+
+  .nav-links li:nth-child(6) {
+      transition: all 0.5s ease 0.9s;
+      margin: 0;
+  }
+
+  .nav-links li:nth-child(7) {
+      transition: all 0.5s ease 1s;
+      margin: 0;
+  }
+
+  li.fade {
+      opacity: 1;
+  }
+}
+
+/*************** CONTENT ****************/
+
+.content {
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero, .para{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 60vw;
+  max-width: 80vw;
+  margin: 5rem auto;
+  z-index: 5;
+  position: relative;
+}
+ 
+.hero h2 {
+  font-size: clamp(2.5rem, 10vw, 3.5rem);
+}
+
+.hero p{
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.results {
+  padding-top: 5%;
+}
+
+.results p{
+  font-size: clamp(1.2rem, 5vw, 1.6rem);
+  font-weight: 600;
+}
+
+.para{
+  margin-top: 10rem;
+}
+
+.para h2{
+  font-size: clamp(1.5rem, 10vw, 2.5rem);
+  padding-top: clamp(2rem, 20vw, 4rem);
+  padding-bottom: clamp(2rem, 20vw, 4rem);
+}
+
+.para p{
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+/************* WAVE ANIMATION *****************/
+
+.waves {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25vh;
+  transition: 500ms;
+  background-color: var(--color);
+}
+
+.waves::before,
+.waves::after {
+  content: '';
+  position: absolute;
+  width: 300vw;
+  height: 300vw;
+  top: -70vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.waves::before {
+  border-radius: 44%;
+  background: rgba(51, 51, 51, .3);
+  animation: waves 15s linear infinite;
+}
+
+.waves::after {
+  border-radius: 44%;
+  background: rgba(51, 51, 51, 0.4);
+  animation: waves 23s linear infinite;
+}
+
+/************* FOOTER *****************/
+footer {
+  bottom: 0;
+  background-color: #111;
+  height: auto;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.rem;
+}
+
+
+/************* MEDIA QUERIES *****************/
+
+/****** TABLET ******/
+@media screen and (max-width: 800px) {
+
+  /**** FOOTER ****/
+  .footer-menu ul{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding: 1em;
+  }
+}
+
+
+/************* MEDIA QUERIES *****************/
+
+/************ TABLET ************/
+@media screen and (max-width: 800px) {
+  /************* WAVES ****************/
+
+  .waves::before,
+  .waves::after {
+    top: -65vw;
+  }
+}
+
+/************ TABLET ************/
+@media screen and (max-width: 500px) {
+
+  /************* WAVES ****************/
+
+  .waves::before,
+  .waves::after {
+    top: -60vw;
+  }
+}
+
+/************* KEY FRAMES *****************/
+
+/*** HERO ***/
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hero {
+  animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+/*** ABT COMP NEWS ***/
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  from {color: transparent;}
+  to {color: #fff;}
+}
+
+.para {
+  animation: 1s ease-out 0s 1 slideUp;
+}
+
+/*** WAVES ***/
+@keyframes waves {
+
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
