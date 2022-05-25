@@ -303,7 +303,7 @@ textarea{
 
 }
 
-.testimonial:hover {
+.testimonial:hover, .testimonial:active {
   box-shadow: 1.5rem 2rem black;
   transform: translateX(-1rem) translateY(-1rem);
 }
