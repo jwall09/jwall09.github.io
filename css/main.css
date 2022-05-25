@@ -221,7 +221,6 @@ nav {
 
 .form {
   min-height: auto;
-  margin: auto;
   background-color: transparent;
   padding: 2rem;
 
@@ -241,10 +240,11 @@ nav {
   width:100%;
   box-sizing: border-box;
   outline:0;
+  color: #fff;
 }
 
 .input::placeholder {
-  color: #d0d0d0;
+  color: #fff;
   padding: .5rem;
   margin: auto;
   font-weight:500;
@@ -255,6 +255,7 @@ nav {
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px;
+  color: #fff;
 }
 
 .input:focus::placeholder {
