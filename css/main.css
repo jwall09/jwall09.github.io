@@ -4,6 +4,8 @@ Coding 07-09
 Purpose: CSS for main bodies of all pages
 **********************/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /******** MAIN PAGE ***********/
 * {
   margin: 0px;
@@ -197,7 +199,106 @@ nav {
   padding: 2px;
 }
 
+/************* Contact Form *******************/
 
+/************* Contact Form *******************/
+
+.contact-page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80vw;
+  margin: auto;
+  border-radius: 10rem;
+  min-height: 100vh;
+}
+
+/************* Contact Form *******************/
+
+.contact-page {
+  color: #fff;
+  overflow: hidden;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 60vw;
+  max-width: 70vw;
+  margin: 0 auto;
+  z-index: 5;
+  position: relative;
+}
+
+form {
+  max-width: 50%; 
+  margin: auto;
+  background-color: #ab6191;
+  border: 5px solid #91ab61;
+  border-radius: 3rem;
+  padding: 3rem;
+
+}
+
+.input {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #91ab61;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.input::placeholder {
+  color: #d0d0d0;
+  padding: .5rem;
+  margin: auto;
+  font-weight:500;
+  font-size: 1.5rem;
+}
+
+.input:focus {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+.form:focus , [type="submit"]:hover{ 
+  border: 1px solid black;
+  padding: 10px;
+  box-shadow: 5px 10px black;
+}
+
+textarea{
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#ab618a;
+  border-radius:5px;
+  border:2px solid #91ab61;
+  cursor:pointer;
+  color:#d0d0d0;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
 /************* WAVE ANIMATION *****************/
 
 .waves {
