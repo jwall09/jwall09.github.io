@@ -549,6 +549,10 @@ img{
 @media screen and (max-width: 500px) {
   
   /**** ABOUT ****/
+  body {
+    background-position: scroll;
+  }
+
   .para {
     line-height: 2.0rem;
     min-width: 90vw;
