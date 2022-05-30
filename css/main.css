@@ -16,9 +16,10 @@ Purpose: CSS for main bodies of all pages
 }
 
 body {
-  background-image: url("../images/top-img.jpg");
+  /* background-image: url("../images/top-img.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background: linear-gradient(-45deg, #c73091 25%,#a52f85 50%,#7f2f78 59%,#622e70 100%);
   overflow-x: hidden;
 }
 
@@ -549,9 +550,6 @@ img{
 @media screen and (max-width: 500px) {
   
   /**** ABOUT ****/
-  body {
-    background-position: scroll;
-  }
 
   .para {
     line-height: 2.0rem;
