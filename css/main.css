@@ -369,7 +369,7 @@ img{
 
 .waves::before {
   border-radius: 44%;
-  background: rgba(51, 51, 51, .6);
+  background: rgba(51, 51, 51, .3);
   animation: waves 15s linear infinite;
 }
 
